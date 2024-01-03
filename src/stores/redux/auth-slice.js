@@ -1,4 +1,4 @@
-import { AUTH_TOKEN, USER_DATA } from "@/configs/env";
+import { AUTH_TOKEN, USER_DATA } from "@/constants/const-variables";
 import { createSlice } from "@reduxjs/toolkit";
 
 import secureLocalStorage from "react-secure-storage";

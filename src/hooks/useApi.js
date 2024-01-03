@@ -1,13 +1,9 @@
+import { BASE_URL } from "@/configs/env";
 import axios from "axios";
-
 import toast from "react-hot-toast";
 
-// @ts-ignore
-const baseURL = import.meta.env.VITE_BASE_URL;
-// VITE_BASE_URL = "http://localhost:8000/api/v1" // Adjust this based on your API endpoint
-
 export const api = axios.create({
-  baseURL,
+  baseURL: BASE_URL,
   withCredentials: true,
   headers: {
     "Content-Type": "application/json",
