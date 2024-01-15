@@ -26,7 +26,6 @@ import RootLayout from "@/RootLayout";
 import AuthLayout from "@/layouts/AuthLayout";
 import ProtectedLayout from "@/layouts/ProtectedLayout";
 import ErrorPage from "@/components/ErrorPage";
-import { ENV } from "@/configs/env";
 
 // ======================================
 // General Pages
@@ -43,6 +42,7 @@ const Licensing = lazy(() => import("@/pages/Licensing"));
 // ======================================
 const Login = lazy(() => import("@/pages/auth/Login"));
 const Register = lazy(() => import("@/pages/auth/Register"));
+Register
 // ======================================
 // Private Pages
 // ======================================
@@ -50,14 +50,6 @@ const Register = lazy(() => import("@/pages/auth/Register"));
 const Settings = lazy(() => import("@/pages/protected/Settings"));
 const Profile = lazy(() => import("@/pages/protected/Profile"));
 const Customers = lazy(() => import("@/pages/protected/Customers"));
-
-// function ErrorBoundary() {
-//   let error = useRouteError();
-//   console.error(error);
-//   // Uncaught ReferenceError: path is not defined
-//   return <div>Dang!</div>;
-// }
-// let basePath = "/";
 
 const MainRouter = createBrowserRouter(
   createRoutesFromElements(

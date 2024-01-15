@@ -20,7 +20,7 @@ export default defineConfig(({ command, mode }) => {
       enabled: true,
     },
     workbox: {
-      globPatterns: ["**/*.{js,css,html,ico,png,svg}"],
+      globPatterns: ["**/*.{js,jsx,css,html,ico,png,svg}"],
     },
     manifest: {
       short_name: "AMH",
