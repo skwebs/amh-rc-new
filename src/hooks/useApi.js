@@ -1,9 +1,9 @@
-import { BASE_URL } from "@/configs/env";
+// import { BASE_URL } from "@/configs/env";
 import axios from "axios";
 import toast from "react-hot-toast";
 
 export const api = axios.create({
-  baseURL: BASE_URL,
+  // baseURL: BASE_URL,
   withCredentials: true,
   headers: {
     "Content-Type": "application/json",

@@ -5,10 +5,11 @@ import secureLocalStorage from "react-secure-storage";
 
 const initialState = {
   auth: {
+    isAuthenticated:
+      // @ts-ignore
+      !!JSON.parse(secureLocalStorage.getItem(AUTH_TOKEN)) || false,
     // @ts-ignore
-    isAuthenticated: !!JSON.parse(secureLocalStorage.getItem(AUTH_TOKEN)),
-    // @ts-ignore
-    token: JSON.parse(secureLocalStorage.getItem(AUTH_TOKEN)),
+    token: JSON.parse(secureLocalStorage.getItem(AUTH_TOKEN)) || undefined,
     // @ts-ignore
     userData: JSON.parse(secureLocalStorage.getItem(USER_DATA))
       ? // @ts-ignore
@@ -25,6 +26,7 @@ const authSlice = createSlice({
   reducers: {
     login: (state, action) => {
       // store token in local storage
+      console.log(action);
       secureLocalStorage.setItem(
         AUTH_TOKEN,
         JSON.stringify(action.payload.token)
