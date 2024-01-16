@@ -1,6 +1,6 @@
 {
   "rewrites": [
     { "source": "/(.*)", "destination": "/" },
-    { "source": "/api/(.*)", "destination": "https://anshumemorial.in/amh-api/api/v1/" }
+    { "source": "/api/(.*)", "destination": "https://anshumemorial.in/amh-api/api/v1/(.*)" }
   ]
 }
