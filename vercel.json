@@ -1,6 +1,6 @@
 {
   "rewrites": [
     { "source": "/(.*)", "destination": "/" },
-    { "source": "/api/(.*)", "destination": "$VITE_BASE_URL/:splat" }
+    { "source": "/api/(.*)", "destination": "https://anshumemorial.in/amh-api/api/v1/:splat" }
   ]
 }
